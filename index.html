@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,intial-scale=1.0">
+	<meta http-equiv="
+	X-UA--Compatable" content="ie=edge">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js"> 
+	<title>My Contacts</title>
+</head>
+<body style="background-color:powderblue;">
+   <div class="container">
+   	<h1 class="center-align">
+   		My Contacts
+   	</h1>
+   	<input type="text" id="filterInput" placeholder="search name...">
+   	   <ul id="names" class="collection with-header">
+   	   	<li class="collection-header">
+         <h3>A</h3>
+     </li>
+         <li class="collection-item">
+         <a href="#">Abe</a> 
+          </li>
+           <li class="collection-item">
+         <a href="#">Adam</a> 
+          </li>   	   		
+           <li class="collection-item">
+         <a href="#">Alan</a>
+     </li>
+          <li class="collection-item">
+         <a href="#">Anna</a> 
+          </li> 
+           <li class="collection-header">
+          	<h3>B</h3>
+          	</li>  	   		
+           <li class="collection-item">
+         <a href="#">Beth</a>
+     </li>
+          <li class="collection-item">
+         <a href="#">Bill</a>  
+          </li>  
+             <li class="collection-item">
+         <a href="#">Bob</a>  
+          </li>  
+             <li class="collection-item">
+         <a href="#">Brad</a> 
+          </li>   	   	
+
+            <li class="collection-header">
+          	<h3>C</h3>
+          	</li>  	   		
+           <li class="collection-item">
+         <a href="#">Carrie</a>
+     </li>
+          <li class="collection-item">
+         <a href="#">Cathy</a>  
+          </li>  
+             <li class="collection-item">
+         <a href="#">Courtney</a>     	 		
+   	   	</li>
+   	   </ul>
+   </div>
+   <script>
+   	// Get input element
+   	let filterInput = document.getElementById('filterInput');
+   	//Add event listener
+   	filterInput.addEventListener('key',filterNames);
+
+   	funtion filterNames(){
+   		//Get value of input 
+   	 let filtervalue =
+   	 document.getElementById('filterInput').value.toUUpperCase();
+
+
+   	 // Get names ul
+   	 let ul = document.getElementId('names');
+   	 // Get lis from ul
+   	 let li = ul.querySelsctorAll('li.collection-item');
+
+   	 // Loop through collection-item lis 
+   	 for(let i = 0;i < li.length;i++){
+        let a = li[i].getElementByTagname('a')[0];
+        // if matched
+
+        if(a.innerHTML.toUUpperCase().indexof(filtervalue) > -1{
+        	li[i].style.display = '';
+        }else{
+             li[i].style.display = 'none'; 
+   	 } 
+   	}
+   }
+
+   </script>
+</body>
+</html
